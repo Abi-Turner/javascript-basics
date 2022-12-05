@@ -1,6 +1,6 @@
 const getNthElement = (index, array) => {
-  return array.at(index);
-  
+  const newIndex = index < array.length ? index : index - array.length;
+  return array[newIndex];
 };
 
 const arrayToCSVString = array => {
@@ -28,18 +28,11 @@ function numbersToStrings(numbers) {
 }
 
 const uppercaseWordsInArray = strings => {
-  strings.map(function(stringsUpper) {
-    return stringsUpper.toUpperCase();
-  });
+  return strings.map(word => word.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
-  const reverse = strings
-    .split('')
-    .reduce()
-    .join('');
-  return reverse;
-  // your code here
+  return strings.map(word => word.split('').reverse().join(''));
 };
 
 const onlyEven = numbers => {
@@ -47,11 +40,16 @@ const onlyEven = numbers => {
   return the_evens;
 }
 const removeNthElement2 = (index, array) => {
- // your code here
+ return array.filter((_, itemIndex) => itemIndex !== index);
 };
 
 const elementsStartingWithAVowel = strings => {
- // your code here
+ const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+ return strings.filter(word => {
+  const firstLetter = word[0].toLowerCase();
+  return vowels.includes(firstLetter);
+ });
 };
 
 const removeSpaces = string => {
