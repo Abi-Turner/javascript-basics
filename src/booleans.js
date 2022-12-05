@@ -1,61 +1,102 @@
 function negate(a) {
-  // your code here
-};
+  return a = !a;
+}
 
 function both(a, b) {
-  // your code here
-};
+  if (a && b) {
+    return true;
+  }
+  return false;
+}
 
 function either(a, b) {
-  // your code here
-};
+  if (a || b) {
+    return true;
+  }
+  return false;
+}
 
 function none(a, b) {
-  // your code here
-};
+  if (!a && !b) {
+    return true;
+  }
+  return false;
+}
 
 function one(a, b) {
-  // your code here
+  if (a && !b) {
+    return true;
+  }
+  if (!a && b) {
+    return true;
+  }
+  return false;
 };
 
 function truthiness(a) {
-  // your code here
-};
+  if (a) {
+    return true;
+  }
+  if (!a) {
+    return false;
+  }
+}
 
 function isEqual(a, b) {
-  // your code here
+  if (a === b) {
+    return true;
+  }
+  return false;
 };
 
 function isGreaterThan(a, b) {
-  // your code here
+  if (a > b) {
+    return true;
+  }
+  return false;
 };
 
 function isLessThanOrEqualTo(a, b) {
-  // your code here
+  if (a <= b) {
+    return true;
+  }
+  return false;
 };
 
 function isOdd(a) {
-  // your code here
-};
+  if (a % 2 == 0) {
+    return false;
+  }
+  return true;
+}
 
 function isEven(a) {
-  // your code here
+  if (a % 2 == 0) {
+    return true;
+  }
+  return false;
 };
 
 function isSquare(a) {
-  // your code here
+  return Math.sqrt(a) % 1 === 0;
 };
 
 function startsWith(char, string) {
-  // your code here
+  if (char === string[0]) {
+    return true;
+  } return false;
+  
 };
 
 function containsVowels(string) {
-  // your code here
+  if (string.match(/[a|e|i|o|u]/i, 0)) {
+    return true;
+  }
+  return false;
 };
 
 function isLowerCase(string) {
-  // your code here
+  return string === string.toLowerCase();
 };
 
 module.exports = {
